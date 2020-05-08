@@ -23,6 +23,11 @@ config/icon="res://icon.png"
 
 SceneChanger="*res://Scenes/SceneChanger.tscn"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [input]
 
 ui_w={
@@ -43,4 +48,5 @@ ui_d={
 
 [rendering]
 
+environment/default_clear_color=Color( 0.631373, 0.698039, 1, 1 )
 environment/default_environment="res://default_env.tres"
