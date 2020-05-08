@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var ColorBlindMode = 0
+var Level = 1
 
 func _ready():
 	randomize()
@@ -16,3 +16,10 @@ func EndGame():
 	$AnimationPlayer.play("FadeOut")
 	yield($AnimationPlayer, "animation_finished")
 	get_tree().quit()
+
+func NextLevel():
+	Level += 1
+	LoadLevel()
+
+func LoadLevel():
+	ChangeScene("res://Scenes/Level" + str(Level) + ".tscn")
