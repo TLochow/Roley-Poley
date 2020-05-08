@@ -47,7 +47,7 @@ margin_right = 312.0
 margin_bottom = -41.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Control the blak wheel
+text = "Control the black wheel
 with a & d
 and the white wheel with
 Left & right"

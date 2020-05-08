@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/SceneChanger.gd" type="Script" id=1]
 [ext_resource path="res://Music.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Sprites/ARCADE_N.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "FadeIn"
@@ -37,6 +38,9 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
 [node name="SceneChanger" type="CanvasLayer"]
 pause_mode = 2
 layer = 128
@@ -58,3 +62,11 @@ anims/FadeOut = SubResource( 2 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
