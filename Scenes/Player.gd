@@ -25,3 +25,13 @@ func _physics_process(delta):
 		$BlackWheel.angular_velocity += blackRotation * delta
 	if whitePressed:
 		$WhiteWheel.angular_velocity += whiteRotation * delta
+	
+	$BlackWheel/FloorRay.rotation = -($BlackWheel.rotation + rotation)
+	$WhiteWheel/FloorRay.rotation = -($WhiteWheel.rotation + rotation)
+	
+	if Input.is_action_just_pressed("ui_w"):
+		if $BlackWheel/FloorRay.is_colliding():
+			$BlackWheel.linear_velocity += Vector2(0.0, -200.0)
+	if Input.is_action_just_pressed("ui_up"):
+		if $WhiteWheel/FloorRay.is_colliding():
+			$WhiteWheel.linear_velocity += Vector2(0.0, -200.0)
